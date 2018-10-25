@@ -59,3 +59,11 @@ BOARD_SEPOLICY_DIRS += \
 	device/ti/beagle_x15/sepolicy
 
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+
+# U-Boot configuration.
+TARGET_UBOOT_ARCH := $(TARGET_ARCH)
+TARGET_UBOOT_SRC := external/u-boot
+TARGET_UBOOT_DEFCONFIG := am57xx_evm_defconfig
+TARGET_UBOOT_CONFIGS += device/ti/beagle_x15/beagle_x15_uboot.conf
+TARGET_UBOOT_MAKE_TARGET := u-boot-img.bin
+TARGET_UBOOT_COPY_TARGETS := u-boot.img MLO
